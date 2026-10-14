@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detalhes — UCSal 65 Anos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+    />
+    <link rel="stylesheet" href="css/detalhe.css" />
+  </head>
+  <body>
+    <nav class="topbar">
+      <a class="btn-voltar" href="index.html">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M19 12H5M11 6l-6 6 6 6" />
+        </svg>
+        <span>Voltar ao mapa</span>
+      </a>
+    </nav>
+
+    <header id="hero" hidden>
+      <span class="status" id="hero-status"></span>
+      <h1 id="hero-titulo"></h1>
+      <p id="hero-endereco"></p>
+      <p id="hero-resumo"></p>
+    </header>
+
+    <main id="conteudo"></main>
+
+    <div id="nao-encontrado" hidden>
+      Não encontramos essa universidade.
+      <a href="index.html">Voltar ao mapa</a>.
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/icons.js"></script>
+    <script src="js/detalhe.js"></script>
+  </body>
+</html>
