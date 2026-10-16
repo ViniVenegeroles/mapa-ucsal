@@ -1,0 +1,162 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  height: 100dvh;
+  font-family: system-ui, sans-serif;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Coluna: barra no topo, mapa ocupando o resto, aviso embaixo.
+   "min-height:0" no #area é essencial: sem ele o mapa não encolhe e
+   passa da tela, ou fica com altura zero. */
+body {
+  display: flex;
+  flex-direction: column;
+  background: #10141b;
+}
+
+#barra {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  background: #1a3a6b;
+  color: #fff;
+}
+#barra h1 {
+  margin: 0;
+  font-size: 16px;
+  flex: 1;
+}
+.voltar {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.modos {
+  display: flex;
+  gap: 4px;
+}
+.modos button {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: #fff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  min-height: 36px;
+}
+.modos button.sel {
+  background: #fff;
+  color: #1a3a6b;
+  font-weight: 700;
+}
+
+#area {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+#mapa {
+  position: absolute;
+  inset: 0;
+}
+
+/* ===== Divisor ===== */
+#divisor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  z-index: 1000;
+  pointer-events: none; /* a linha deixa o mapa receber o toque; só a alça captura */
+}
+#divisor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.5px;
+  width: 3px;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+#alca {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: #1a3a6b;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  pointer-events: auto;
+  cursor: ew-resize;
+  touch-action: none; /* sem isso o navegador do celular rola a página em vez de deixar arrastar */
+}
+#alca:focus-visible {
+  outline: 3px solid #e2a640;
+}
+
+/* ===== Seletores de data ===== */
+.seletor {
+  position: absolute;
+  top: 10px;
+  z-index: 1001;
+  background: rgba(16, 20, 27, 0.85);
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+}
+.seletor.esq {
+  left: 10px;
+}
+.seletor.dir {
+  right: 10px;
+}
+.seletor select {
+  font-size: 14px;
+  min-height: 36px;
+  border-radius: 6px;
+}
+
+#status {
+  position: absolute;
+  inset: 0;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16, 20, 27, 0.9);
+  color: #fff;
+  padding: 24px;
+  text-align: center;
+}
+
+#aviso {
+  margin: 0;
+  padding: 8px 14px;
+  font-size: 11.5px;
+  color: #9aa3b2;
+  background: #10141b;
+}
+#aviso a {
+  color: #e2a640;
+}

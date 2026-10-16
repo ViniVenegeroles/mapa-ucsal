@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comparar imagens de satélite — UCSal 65 Anos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+    />
+    <link rel="stylesheet" href="css/comparar.css" />
+  </head>
+  <body>
+    <header id="barra">
+      <a class="voltar" id="link-voltar" href="index.html">← Voltar</a>
+      <h1 id="titulo">Comparar imagens</h1>
+      <div class="modos">
+        <button id="modo-dividido" class="sel">Dividido</button>
+        <button id="modo-unica">Uma data</button>
+      </div>
+    </header>
+
+    <div id="area">
+      <div id="mapa"></div>
+
+      <!-- O divisor fica FORA do #mapa de propósito: assim o Leaflet não
+       mistura o arrasto da linha com o arrasto do mapa. -->
+      <div id="divisor">
+        <div
+          id="alca"
+          tabindex="0"
+          role="slider"
+          aria-label="Arraste para comparar"
+        >
+          ‹ ›
+        </div>
+      </div>
+
+      <div class="seletor esq">
+        <label id="lbl-esq" for="sel-esq">Antes</label
+        ><select id="sel-esq"></select>
+      </div>
+      <div class="seletor dir">
+        <label for="sel-dir">Depois</label
+        ><select id="sel-dir"></select>
+      </div>
+      <div id="status" hidden></div>
+    </div>
+
+    <p id="aviso">
+      As datas são das <strong>versões do mapa da Esri</strong>, não
+      necessariamente do dia em que a foto foi tirada. Para ver a data real de
+      captura de cada trecho, consulte o
+      <a
+        href="https://livingatlas.arcgis.com/wayback/"
+        target="_blank"
+        rel="noopener"
+        >Esri Wayback</a
+      >.
+    </p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/comparar.js"></script>
+  </body>
+</html>

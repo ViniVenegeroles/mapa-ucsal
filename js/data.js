@@ -71,6 +71,10 @@ const campiUCSal = [
       // { src: "imagens/campi/palma.jpg", legenda: "Igreja e Convento da Palma", credito: "Souza (2012), Wikimedia Commons, CC BY-SA 3.0" },
     ],
     depoimentos: [],
+    comparar: {
+      zoom: 19,
+      versoes: ["2018-10-17", "2022-06-08", "2025-02-27", "2026-09-24"],
+    },
     fontes: [
       "ALMEIDA (2021)",
       "TAVARES (2021)",
@@ -135,6 +139,10 @@ const campiUCSal = [
       "Combinou o aproveitamento de uma edificação religiosa tombada com a construção de estruturas novas no antigo quintal, uma transição entre a adaptação pura (Palma) e a expansão planejada que viria depois.",
     fotos: [],
     depoimentos: [],
+    comparar: {
+      zoom: 19,
+      versoes: ["2018-10-17", "2025-02-27", "2026-09-24"],
+    },
     fontes: [
       "TAVARES (2021)",
       "IPHAN (2009), Bens tombados 1938–2009",
@@ -211,6 +219,10 @@ const campiUCSal = [
       "EXAME (2026), Moura Dubeux",
       "A TARDE (10 ago. 2026)",
     ],
+    comparar: {
+      zoom: 17,
+      versoes: ["2014-02-20", "2018-10-17", "2025-11-20", "2026-09-24"],
+    },
   },
 
   {
@@ -306,6 +318,17 @@ const campiUCSal = [
       "Edifícios em níveis diferentes, articulados por rampas e passarelas, seguindo o relevo acidentado, e convivência direta entre áreas construídas e Mata Atlântica. Uma lógica bem diferente dos conventos adaptados dos primeiros campi.",
     fotos: [],
     depoimentos: [],
+    comparar: {
+      zoom: 17,
+      versoes: [
+        "2014-02-20",
+        "2016-10-20",
+        "2018-10-17",
+        "2022-06-08",
+        "2025-02-27",
+        "2026-09-24",
+      ],
+    },
     fontes: [
       "LIRA (2016)",
       "ALMEIDA (2021)",

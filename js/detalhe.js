@@ -12,6 +12,11 @@ const secao = (titulo, corpo) =>
 
 const temItens = (arr) => Array.isArray(arr) && arr.length > 0;
 
+// Só aparece nos campi que têm a configuração "comparar" no data.js
+const comparar = item.comparar
+  ? `<a class="btn-comparar" href="comparar.html?slug=${item.slug}">Comparar imagens de satélite ao longo dos anos</a>`
+  : "";
+
 if (!item) {
   document.getElementById("nao-encontrado").hidden = false;
 } else {
@@ -108,6 +113,7 @@ if (!item) {
     ${secao("Cursos", cursos)}
     ${secao("Fotos", galeria)}
     ${secao("Depoimentos", depoimentos)}
+    ${secao("Imagens de satélite", comparar)}
     ${item.coords ? secao("Localização", '<div id="mini-mapa"></div>') : ""}
     ${secao("Fontes", fontes)}
     ${secao("Conheça os outros campi", outros)}
